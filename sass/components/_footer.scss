@@ -4,14 +4,54 @@
     padding-bottom: 60px;
     &__container {
         display: flex;
-        align-items: baseline;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 768px){
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+
+        @media screen and (min-width: 1200px) {
+            align-items: baseline;  
+        }
+        
     }
-    &__contacts-box {
-        margin-right: 70px;
+    
+}
+.footer__contacts-box {
+    @media screen and (min-width: 768px){
+        margin-right: 165px;
+    }
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px; 
     }
 }
+.footer__socials {
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin-bottom: 60px;
+    }
 
+}
+.address__list {
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin-bottom: 60px;
+    }
 
+}
 .address__item:not(:last-child) {
     margin-bottom: 9px;
 }
@@ -61,7 +101,15 @@
 }
 
 .subscribe-form {
-    margin-left: auto;  
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: auto;
+    }
+      
 }
 .subscribe-form__text {
     display: block;
@@ -76,7 +124,12 @@
 .subscribe-form__field {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
+    @media screen and (max-width: 1199px) {
+        flex-direction: column;
+        align-items: center; 
+    }
 }
 .subscribe-form__label--hidden {
     @extend .visualy-hidden;
@@ -104,6 +157,13 @@
     &:focus {
         border-color: $primary-white-color;
     }
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        width: 450px;
+    }
+
 }
 
 .btn-subscription {

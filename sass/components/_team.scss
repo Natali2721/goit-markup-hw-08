@@ -1,6 +1,10 @@
 
 .team {
-    display: flex;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
 }
 .team__item {
     background-color: $primary-bgc;
@@ -11,9 +15,13 @@
     &:hover {
         transform: scale(1.1);
     }
-    &:not(:last-child){
-        margin-right: 30px;
+
+    @media screen and (min-width: 768px) {
+        &:not(:last-child){
+            margin: 30px;
+        }
     }
+    
 }
 
 .team__box {

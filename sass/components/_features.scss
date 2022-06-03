@@ -1,5 +1,7 @@
 .features-list {
+   
     display: flex;
+    flex-wrap: wrap;
 }
 .features-list__item {
     width: 270px;

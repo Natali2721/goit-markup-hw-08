@@ -1,8 +1,8 @@
 @import './utils/vars';
-@import './base/common.scss';
-@import './base/reset.scss';
-@import './base/container.scss';
-@import './utils/common';
+@import './base/common';
+@import './base/reset';
+@import './vendors/vh';
+@import './base/container';
 @import './components/logo';
 @import './components/header';
 @import './components/hero';

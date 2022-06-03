@@ -1,24 +1,42 @@
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 1600px;
+    max-width: 468px;
     text-align: center;
     background: $second-bgc;
     background-image: linear-gradient(to right, $hero-linear-color, $hero-linear-color) , url(../images/bgi-hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
+
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        max-width: 1600px;
+    }
+   
+
     &__title {
-        margin: 0 auto 30px;
-        width: 696px;
+        width: 360px;
         color: $primary-white-color;
         font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
+        font-size: 26px;
+        line-height: 1.62;
         letter-spacing: 0.06em;
         text-transform: uppercase;
+        margin: 0 auto 30px;
+
+        @media screen and (min-width: 1200px) {
+            width: 696px;
+            font-size: 44px;
+            line-height: 1.36;
+        }
     }
 }
 

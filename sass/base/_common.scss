@@ -9,13 +9,20 @@ body {
     letter-spacing: 0.03em;
 }
 
-
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}  
 .section--no-padding {
     padding-top: 0; 
+    @media screen and (max-width:1199px) {
+        display: none;
+    }
 }
 .section--other-bgc {
     background-color: $third-bgc;
@@ -24,26 +31,22 @@ body {
 .section__title {
     color: $title-color;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+        line-height: 1.16;
+        margin-bottom: 50px;
+    }
 }
-.visualy-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
+
 .section__title--hidden {
     @extend .visualy-hidden;
 }
+
 .btn {
     border-radius: 4px;
     font-family: inherit;
