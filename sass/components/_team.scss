@@ -1,0 +1,73 @@
+
+.team {
+    display: flex;
+}
+.team__item {
+    background-color: $primary-bgc;
+    box-shadow: 0px 1px 3px $shadow-prime-color, 0px 1px 1px $shadow-second-color, 0px 2px 1px $shadow-third-color;
+    border-radius: 0px 0px 4px 4px;
+    transform: scale(1);
+    transition: transform $duration $timing-function;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:not(:last-child){
+        margin-right: 30px;
+    }
+}
+
+.team__box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.team__title {
+    color: $title-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.team__txt {
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+
+}
+.socials__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.socials__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    transition: background-color $duration $timing-function;
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+.socials__icon {
+    fill: $main-icon-fill;
+    transition: fill $duration $timing-function;
+    .socials__link:hover & ,
+    .socials__link:focus & {
+       fill: $primary-white-color;
+    }
+}

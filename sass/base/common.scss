@@ -1,0 +1,61 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $primary-text-color;
+    background-color: $primary-bgc;
+    font-family: $font-family;
+    letter-spacing: 0.03em;
+}
+
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.section--no-padding {
+    padding-top: 0; 
+}
+.section--other-bgc {
+    background-color: $third-bgc;
+}
+
+.section__title {
+    color: $title-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.visualy-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.section__title--hidden {
+    @extend .visualy-hidden;
+}
+.btn {
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px $btn-box-shadow;
+    border: none;
+    color: $primary-white-color;
+    background-color: $accent-color;  
+    display: inline-block; 
+    text-align: center;
+    cursor: pointer;
+}

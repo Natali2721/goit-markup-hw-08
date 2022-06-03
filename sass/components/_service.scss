@@ -1,0 +1,28 @@
+
+
+.services {
+    display: flex;
+}
+
+.services__item {
+    position: relative;
+    flex-basis: calc((100% - 60px)/3);
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+.services__overlay-txt {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-color: $service-overlay-bgc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primary-white-color;
+}

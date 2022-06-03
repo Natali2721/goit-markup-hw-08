@@ -1,0 +1,35 @@
+.clients {
+    display: flex;
+}
+
+.clients__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+    
+.clients__icon {
+    fill: currentColor;
+    transition: fill $duration $timing-function;
+}
+
+
+.clients__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 4px; 
+    width: 170px;
+    height: 92px;
+    color: $main-icon-fill; 
+    transition: color $duration $timing-function;
+    &:hover,
+    &:focus {
+      color:  $accent-color;
+    }
+}

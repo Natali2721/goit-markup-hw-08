@@ -1,0 +1,178 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 528px;
+    height: 581px;
+    opacity: 1;
+    transition: transform $duration $timing-function, box-shadow $duration $timing-function, opacity $duration $timing-function, background-color $duration $timing-function;
+    background-color: $primary-bgc;
+    box-shadow: 0px 1px 3px $shadow-prime-color, 0px 1px 1px $shadow-second-color, 0px 2px 1px $shadow-third-color;
+    border-radius: 4px; 
+    padding: 40px;
+    cursor: pointer;
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+        background-color: transparent;
+    }
+}
+
+.btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid $btn-close-border-color;
+    background-color: $primary-bgc;
+    cursor: pointer;
+}
+
+.btn-close__icon {
+    fill: $btn-close-icon;
+    transition: fill $duration $timing-function;
+    .btn-close:hover &,
+    .btn-close:focus &  {
+        fill: $accent-color;
+    }
+}
+
+.contact-form__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px; 
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-color;
+    display: block;
+    margin-bottom: 12px;
+}
+.contact-form__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 20px;
+    }
+}
+
+.contact-form__label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+}
+.contact-form__input {
+    width: 448px;
+    height: 40px;
+    outline: transparent;
+    padding: 12px 16px 12px 42px;
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color $duration $timing-function, box-shadow $duration $timing-function;
+}
+.contact-form__input-box {
+    position: relative;
+}
+
+.contact-form__icon {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    fill: $title-color;
+    transition: fill $duration $timing-function;
+    .contact-form__input:focus + & {
+        fill: $accent-color;
+    }
+}
+
+.contact-form__comment-area {
+    resize: none;
+    height: 120px;
+    padding: 12px 16px;
+    outline: transparent;
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $title-color;
+    cursor: pointer;
+    transition: border-color $duration $timing-function, box-shadow $duration $timing-function;
+}
+
+::placeholder {
+    color: $placeholder-color;
+    letter-spacing: 0.01em;
+}
+
+.contact-form__input:focus,
+.contact-form__comment-area:focus {
+    border-color: $accent-color;
+    box-shadow: 0px 1px 3px $shadow-prime-color, 0px 1px 1px $shadow-second-color, 0px 2px 1px $shadow-third-color;
+}
+
+.agree-wrap {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    &__label {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 1.71;   
+    }
+    &__link {
+        color: $accent-color;
+        text-decoration: underline;
+    }
+}
+
+.agree-wrap__checkbox {
+    @extend .visualy-hidden;
+}
+
+.agree-wrap__icon--unchecked {
+    margin-right: 7px;
+    transition: fill $duration $timing-function, display $duration $timing-function;
+    .checkbox:focus + & {
+        fill: $accent-color;
+    }
+    .checkbox:checked + & {
+        display: none;
+    }
+}
+
+.agree-wrap__icon--checked {
+    display: none;
+    transition: background-color $duration $timing-function;
+    .checkbox:checked ~ & {
+        display: block;
+        margin-right: 7px;
+        fill: $primary-white-color;
+        background-color: $accent-color;
+        border-radius: 2px;
+    }
+}
+
+.contact-form__btn-submit {
+    @extend .btn;
+    padding: 10px 55px 10px 55px;
+    display: block; 
+    margin: 0 auto;
+    transition: background-color $duration $timing-function;
+    &:hover,
+    &:focus {
+       background-color: $btn-hf-color;
+    }
+}
