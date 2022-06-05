@@ -1,5 +1,5 @@
 .features-list {
-   @media screen and (min-width: 768px) {
+   @media screen and (min-width: $width-min-tablet) {
      display: flex;
      flex-wrap: wrap;
    }
@@ -8,14 +8,13 @@
 .features-list__item {
     flex-basis: 100%;
     
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $width-max-mobile) {
         &:not(:last-child) {
             margin-bottom: 30px;
         }
     }
     
-
-    @media screen and (min-width: 768px) and (max-width:1199px) {
+    @media screen and (min-width: $width-min-tablet) and (max-width: $width-max-tablet) {
         flex-basis: calc((100% - 30px) / 2);
         &:nth-child(odd) {
             margin-right: 30px;
@@ -25,7 +24,7 @@
         }
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $width-min-desktop) {
         width: 270px;
 
         &:not(:last-child) {
@@ -52,7 +51,7 @@
     margin-bottom: 10px;
     margin-top: 30px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $width-min-tablet) {
         text-align: start;
     }
 }
