@@ -3,8 +3,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 528px;
-    height: 581px;
     opacity: 1;
     transition: transform $duration $timing-function, box-shadow $duration $timing-function, opacity $duration $timing-function, background-color $duration $timing-function;
     background-color: $primary-bgc;
@@ -12,6 +10,15 @@
     border-radius: 4px; 
     padding: 40px;
     cursor: pointer;
+    width: 450px;
+    height: 610px;
+
+    @media screen and (min-width: $width-min-desktop) {
+        width: 528px;
+        height: 581px;
+
+    }
+    
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0.5);
         opacity: 0;
@@ -47,7 +54,7 @@
 .contact-form__title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 23px; 
+    line-height: 1.5; 
     text-align: center;
     letter-spacing: 0.03em;
     color: $title-color;
@@ -70,7 +77,12 @@
     line-height: 14px;
     letter-spacing: 0.01em;
     cursor: pointer;
+    transition: color $duration $timing-function;
+    .contact-form__input-box:focus + & {
+        color: $accent-color;
+    }
 }
+
 .contact-form__input {
     width: 448px;
     height: 40px;

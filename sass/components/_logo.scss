@@ -5,7 +5,7 @@
     font-size: 24px;
     line-height: 1.17;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $width-min-desktop) {
         font-size: 26px;
         line-height: 1.19;  
     }
@@ -16,12 +16,20 @@
 } 
 
 .logo__header {
-    padding: 16px 0;
+    display: inline-block;padding-top: 26px;
+    padding-bottom: 16px;
+    padding-top: 16px;
     
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $width-min-tablet) {
+        margin-right: 88px;
+        padding-top: 26px;
+        padding-bottom: 25px;  
+    }
+
+    @media screen and (min-width: $width-min-desktop) {
         margin-right: 93px;
         padding-top: 24px;
-        padding-bottom: 25px;  
+        padding-bottom: 24px;  
     }
 }
 

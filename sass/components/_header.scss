@@ -1,30 +1,121 @@
 .header {
     border-bottom: 1px solid $header-border-color;
-    &__container {
+}
+
+.header__container {
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        position: static;
         display: flex;
-        flex-wrap: wrap;
     }
 }
 
-.nav {
+.header-menu__btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     display: flex;
-    &__list {
-        display: flex;
-    }
-    &__item:not(:last-child) {
-        margin-right: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background-color: $primary-bgc;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    z-index: 1;
+
+    @media screen and (min-width: 768px){
+        display: none;
     }
 }
-.nav__link {
+
+.header-menu__icon {
+    fill: $btn-close-icon;
+    transition: fill $duration $timing-function;
+    .header-menu__btn:hover &,
+    .header-menu__btn:focus &  {
+        fill: $accent-color;
+    }
+}
+
+.header-menu__icon-cross {
+    display: none;
+    .header-menu__btn.is-open & {
+        display: block;
+    }
+}
+
+.header-menu__btn.is-open .header-menu__icon-menu {
+    display: none;
+}
+
+.header-menu {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $primary-bgc;
+    padding: 40px 48px;
+    
+    @media screen and (min-width: $width-min-tablet) {
+      display: flex; 
+      position: static;
+      padding: 0;
+    }
+}
+.header-menu.is-open {
+
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+   
+    @media screen and (min-width: $width-min-tablet) {
+        display: flex; 
+        position: static;
+        padding: 0;
+    }
+}
+.nav {
+    @media screen and (max-width: $width-max-mobile) {
+        margin-bottom: 301px;
+    }
+}
+.nav__list {
+    @media screen and (min-width: $width-min-tablet) {
+        display: flex;
+    }
+}
+
+.nav__item:not(:last-child) {
+    margin-bottom: 34px;
+
+    @media screen and (min-width: $width-min-tablet) {
+        margin-right: 50px;
+        margin-bottom: 0;
+    }
+}
+
+.nav__link {
+    font-family: 'Roboto';
+    font-style: normal;
     color: $title-color;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 40px;
+    line-height: 47px;
+    
     letter-spacing: 0.02em;
     transition: color $duration $timing-function;
+
+    @media screen and (min-width: $width-min-tablet) {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 14px;
+        line-height: 1.14;
+    }
+  
     &:hover,
     &:focus {
        color: $accent-color;
@@ -33,7 +124,10 @@
 .nav__link--current {
     color: $accent-color;
     position: relative;
-    &::after {
+}
+
+.nav__link--current::after {
+    @media screen and (min-width: $width-min-tablet) {
         content: " ";
         display: inline-block;
         position: absolute;
@@ -45,33 +139,124 @@
         border-radius: 2px;
     }
 }
+
 .contacts {
     display: flex;
-    margin-left: auto;
-    align-items: center;
-    &__item + &__item {
-        margin-left: 50px;
+    flex-direction: column-reverse;
+
+    @media screen and (min-width: $width-min-tablet) {
+       flex-direction: column;
+       margin-left: auto;
     }
-    &__icon {
-        margin-right: 10px;
-        fill: currentColor;
-        transition: fill $duration $timing-function;
+
+    @media screen and (min-width: $width-min-desktop) {
+       flex-direction: row;
+       margin-left: auto;
+       align-items: center;
     }
 }
-.contacts__link {
+
+.contacts__item + .contacts__item {
+    margin-bottom: 32px;
+
+    @media screen and (min-width: $width-min-tablet) {
+        margin-bottom: 0px;
+    }
+    
+    @media screen and (min-width: $width-min-desktop) {
+        margin-left: 50px;
+        margin-bottom: 0;
+    }
+}
+
+.contacts__icon {
+    @media screen and (max-width: $width-max-mobile) {
+        display: none;
+    }
+
+    margin-right: 10px;
+    fill: currentColor;
+    transition: fill $duration $timing-function;
+}
+.contacts__link-tel {
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: $primary-text-color;
+   
+    color: $accent-color;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 34px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     transition: color $duration $timing-function;
+
+   
+    @media screen and (min-width: $width-min-tablet) {
+        color: $primary-text-color;
+        font-size: 12px;
+        line-height: 1.16;
+        padding-bottom: 20px;
+    }
+    
+    @media screen and (min-width: $width-min-desktop) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 14px;
+        line-height: 1.14;
+    }
+
     &:hover,
     &:focus {
       color: $accent-color;
     }
+}
+
+.contacts__link-mail {
+    display: flex;
+    align-items: center;
+    color: $primary-text-color;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    transition: color $duration $timing-function;
+ 
+    @media screen and (min-width: $width-min-tablet) {
+        font-size: 12px;
+        line-height: 1.16;
+        padding-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    @media screen and (min-width: $width-min-desktop) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 14px;
+        line-height: 1.14;
+        margin-bottom: 0;
+    }
+    
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+}
+.header-menu__socials {
+    display: flex;
+    margin-top: 64px;
+    @media screen and (min-width: $width-min-tablet) {
+        display: none;
+    }
+}
+.header-menu__link {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+
+    letter-spacing: 0.02em;
+
+    color: $accent-color; 
 }

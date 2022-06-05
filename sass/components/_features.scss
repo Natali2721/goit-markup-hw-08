@@ -25,7 +25,7 @@
     }
 
     @media screen and (min-width: $width-min-desktop) {
-        width: 270px;
+        flex-basis: calc((100% - 90px) / 4);
 
         &:not(:last-child) {
            margin-right: 30px;

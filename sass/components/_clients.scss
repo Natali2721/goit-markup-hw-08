@@ -32,6 +32,7 @@
     }
 
     @media screen and (min-width: $width-min-desktop) {
+        flex-basis: calc((100% - 180px) / 6);
         margin-right: 30px;
         &:last-child {
             margin-right: 0;
@@ -54,6 +55,13 @@
     padding: 16px 52px;
     color: $main-icon-fill; 
     transition: color $duration $timing-function;
+    @media screen and (min-width: $width-min-tablet ) {
+        padding: 16px 60px;
+    }
+    @media screen and (min-width: $width-min-desktop ) {
+        padding: 16px 32px;
+    }
+
     &:hover,
     &:focus {
       color:  $accent-color;
