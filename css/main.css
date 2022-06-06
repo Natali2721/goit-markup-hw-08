@@ -439,8 +439,11 @@ ul, ol {
 }
 
 .header {
-  position: relative;
   border-bottom: 1px solid #ECECEC;
+}
+
+.header__container {
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -454,7 +457,7 @@ ul, ol {
 .header-menu__btn {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,7 +474,7 @@ ul, ol {
   cursor: pointer;
   border: none;
   background-color: transparent;
-  z-index: 1;
+  z-index: 10;
 }
 
 @media screen and (min-width: 768px) {
@@ -511,6 +514,7 @@ ul, ol {
   width: 100%;
   background-color: #ffffff;
   padding: 40px 48px;
+  z-index: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -1581,7 +1585,7 @@ ul, ol {
 .contact-form__label {
   margin-bottom: 4px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.16;
   letter-spacing: 0.01em;
   cursor: pointer;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1751,10 +1755,33 @@ ul, ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filter__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+  }
 }
 
 .filter__item:not(:last-child) {
