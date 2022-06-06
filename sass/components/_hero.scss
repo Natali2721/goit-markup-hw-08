@@ -3,7 +3,7 @@
     padding-bottom: 118px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 468px;
+   
     text-align: center;
     background: $second-bgc;
     background-image: linear-gradient(to right, $hero-linear-color, $hero-linear-color) , url(../images/bgi-hero.jpg);
@@ -11,17 +11,11 @@
     background-repeat: no-repeat;
     background-position: center; 
 
-    @media screen and (min-width: 768px) {
-        max-width: 768px;
-    }
-
     @media screen and (min-width: 1200px) {
         padding-top: 200px;
         padding-bottom: 200px;
-        max-width: 1600px;
     }
    
-
     &__title {
         width: 360px;
         color: $primary-white-color;
