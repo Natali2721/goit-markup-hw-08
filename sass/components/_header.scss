@@ -266,3 +266,15 @@
 
     color: $accent-color; 
 }
+.header-menu__item {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid $input-border-color;
+    &:last-child {
+        padding-right: 0;
+        border-right: none;
+    }
+    &:first-child {
+        padding-left: 0;
+    }
+}

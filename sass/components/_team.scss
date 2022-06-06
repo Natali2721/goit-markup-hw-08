@@ -12,19 +12,19 @@
     border-radius: 0px 0px 4px 4px;
     transform: scale(1);
     transition: transform $duration $timing-function;
-    flex-basis: calc(100% - 30px);
+    
     &:hover {
         transform: scale(1.1);
     }
 
     @media screen and (max-width: $width-max-mobile) {
-        flex-basis: calc(100% - 30px);
+        flex-basis: 100%;
         &:not(:last-child){
             margin-bottom: 30px;
         }
     }
 
-    @media screen and (max-width: $width-max-tablet) {
+    @media screen and (min-width: $width-min-tablet) and (max-width: $width-max-tablet) {
         flex-basis: calc((100% - 60px) / 2 );
         &:nth-child(2n + 1){
             margin-right: 30px;
