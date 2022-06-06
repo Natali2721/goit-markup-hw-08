@@ -70,7 +70,7 @@
 .header-menu.is-open {
 
     display: block;
-   
+
     @media screen and (min-width: $width-min-tablet) {
         display: flex; 
         position: static;
