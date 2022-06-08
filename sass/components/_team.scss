@@ -12,10 +12,6 @@
     border-radius: 0px 0px 4px 4px;
     transform: scale(1);
     transition: transform $duration $timing-function;
-    
-    &:hover {
-        transform: scale(1.1);
-    }
 
     @media screen and (max-width: $width-max-mobile) {
         flex-basis: 100%;
@@ -35,6 +31,10 @@
     }
     @media screen and (min-width: $width-min-desktop) {
         flex-basis: calc((100% - 120px) / 4 );
+
+        &:hover {
+            transform: scale(1.1);
+        }
 
         &:not(:last-child){
             margin-right: 30px;

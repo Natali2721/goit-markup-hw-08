@@ -1,14 +1,11 @@
 .header {
-    position: relative;
- 
     border-bottom: 1px solid $header-border-color;
 }
 
 .header__container {
-   
+    position: relative;
 
     @media screen and (min-width: 768px) {
-        
         display: flex;
     }
 }
@@ -37,6 +34,7 @@
 .header-menu__icon {
     fill: $btn-close-icon;
     transition: fill $duration $timing-function;
+    
     .header-menu__btn:hover &,
     .header-menu__btn:focus &  {
         fill: $accent-color;
@@ -64,7 +62,6 @@
     background-color: $primary-bgc;
     padding: 40px 48px;
     z-index: 1;
-
    
     @media screen and (min-width: $width-min-tablet) {
       display: flex; 
@@ -76,18 +73,19 @@
     display: block;
     top: 0;
   
-  
     @media screen and (min-width: $width-min-tablet) {
         display: flex; 
         position: static;
         padding: 0;
     }
 }
+
 .nav {
     @media screen and (max-width: $width-max-mobile) {
         margin-bottom: 301px;
     }
 }
+
 .nav__list {
     @media screen and (min-width: $width-min-tablet) {
         display: flex;
@@ -196,7 +194,6 @@
     letter-spacing: 0.02em;
     transition: color $duration $timing-function;
 
-   
     @media screen and (min-width: $width-min-tablet) {
         color: $primary-text-color;
         font-size: 12px;
