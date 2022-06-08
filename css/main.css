@@ -1950,7 +1950,7 @@ ul, ol {
 
 @media screen and (min-width: 768px) {
   .projects-grid__overlay {
-    padding: 49px 24px 77px;
+    padding: 49px 24px 77px 24px;
   }
 }
 

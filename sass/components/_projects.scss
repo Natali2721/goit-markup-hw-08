@@ -62,7 +62,7 @@
     transition: transform $duration $timing-function, opacity $duration $timing-function; 
     
     @media screen and (min-width: $width-min-tablet) {
-        padding: 49px 24px 77px;
+        padding: 49px 24px 77px 24px;
     }
     @media screen and (min-width: $width-min-desktop) {
         padding: 63px 24px;
