@@ -21,7 +21,7 @@
     }
 
     @media screen and (min-width: $width-min-tablet) and (max-width: $width-max-tablet) {
-        flex-basis: calc((100% - 60px) / 2 );
+        flex-basis: calc((100% - 30px) / 2 );
         &:nth-child(2n + 1){
             margin-right: 30px;
         }
@@ -30,7 +30,7 @@
         }
     }
     @media screen and (min-width: $width-min-desktop) {
-        flex-basis: calc((100% - 120px) / 4 );
+        flex-basis: calc((100% - 90px) / 4 );
 
         &:hover {
             transform: scale(1.1);
